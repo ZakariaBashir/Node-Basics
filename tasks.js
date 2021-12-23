@@ -81,7 +81,7 @@ function quit(){
 // The following line starts the application
 startApp("Zakaria Bashir")
 
-// New command "help"
+// New command "help" 
 function help(){
   console.log('help, quit, exit')
 }
