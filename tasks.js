@@ -72,6 +72,7 @@ function hello(text){
 }
 
 
+
 /**
  * Exits the application
  *
