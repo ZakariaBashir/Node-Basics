@@ -138,8 +138,10 @@ function edit(text) {
     if (text == 'edit') console.log('Error')
     else if (isNaN(text[1])) {
         tasks[tasks.length - 1] = text.slice(1).join()
-    } else {
+    } else if (text[1] <= tasks.length) {
         tasks[text[1] - 1] = text.slice(2).join()
+    } else {
+        console.log("item does not exist")
     }
 }
 
