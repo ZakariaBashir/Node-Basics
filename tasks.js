@@ -144,5 +144,5 @@ startApp("Zakaria Bashir")
 
 // New command "help" 
 function help() {
-    console.log('help, quit, exit, extended hello')
+    console.log('help, quit, exit,  hello, add, add text, remove, remove num')
 }
