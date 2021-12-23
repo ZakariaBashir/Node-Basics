@@ -44,6 +44,8 @@ function onDataReceived(text) {
         add(text);
     } else if (text.split(" ")[0] === 'remove') {
         remove(text);
+    } else if (text.split(" ")[0] === 'edit') {
+        edit(text);
     } else {
         unknownCommand(text);
     }
@@ -125,6 +127,22 @@ function remove(text) {
         }
     }
 }
+
+/**
+ * edit list
+ *
+ * @returns {void}
+ */
+function edit(text) {
+    text = text.split(' ')
+    if (text == 'edit') console.log('Error')
+    else if (isNaN(text[1])) {
+        tasks[tasks.length - 1] = text.slice(1).join()
+    } else {
+        tasks[text[1] - 1] = text.slice(2).join()
+    }
+}
+
 
 
 
