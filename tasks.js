@@ -41,11 +41,15 @@ function onDataReceived(text) {
   else if (text.split(" ")[0] === ('hello')) {
     hello(text);
   }
+  else if (text === 'list') {
+    list();
+  }
   else{
     unknownCommand(text);
   }
 }
 
+var tasks = ['task1','task2']
 
 /**
  * prints "unknown command"
@@ -70,6 +74,23 @@ function hello(text){
   else console.log('hello '+ text[1]+'!')
 
 }
+
+
+/**
+ * show list
+ *
+ * @returns {void}
+ */
+ function list(){
+  
+  for(let i =0 ;i< tasks.length ; i++){
+    console.log('task '+(i*1+1)+ ':' + tasks[i]+ '\n')
+  }
+
+}
+
+
+
 
 
 
