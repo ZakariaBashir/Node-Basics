@@ -44,6 +44,9 @@ function onDataReceived(text) {
   else if (text === 'list') {
     list();
   }
+  else if (text.split(" ")[0] === 'add') {
+    add(text);
+  }
   else{
     unknownCommand(text);
   }
@@ -84,7 +87,21 @@ function hello(text){
  function list(){
   
   for(let i =0 ;i< tasks.length ; i++){
-    console.log('task '+(i*1+1)+ ':' + tasks[i]+ '\n')
+    console.log('task '+(i*1+1)+ ': ' + tasks[i]+ '\n')
+  }
+
+}
+
+
+/**
+ * add list
+ *
+ * @returns {void}
+ */
+ function add(text){
+  if ( text ==='add') console.log('Error')
+  else {
+    tasks.push(text.substring(4))
   }
 
 }
