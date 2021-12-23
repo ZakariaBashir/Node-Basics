@@ -117,11 +117,13 @@ function remove(text) {
         text = text.split(' ')
         if (isNaN(text[1])) {
             console.log('enter number')
+        } else if (text[1] > tasks.length) {
+            console.log("this item does not exist")
         } else {
+
             tasks.splice(text[1] - 1, 1)
         }
     }
-
 }
 
 
